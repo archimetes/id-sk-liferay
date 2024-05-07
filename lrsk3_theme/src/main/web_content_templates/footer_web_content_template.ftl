@@ -69,12 +69,12 @@
 		</ul>
 	</#if>
 	<div class="footer-text">
-		<p class="body-l">
-			<#if (text.data)??>
+		<#if (text.data)??>
+			<p class="body-l" style="margin-bottom: 20px;">
 				${text.data}
-			</#if>
-		</p>
-		<p class="body-l">
+			</p>
+		</#if>
+		<p class="body-l" style="margin-bottom: 20px;">
 			Vytvorené v súlade s <a class="govuk-link" href="https://idsk.gov.sk/" title="Jednotným dizajn manuálom elektronických služieb."> Jednotným dizajn manuálom elektronických služieb.</a>
 		</p>
 		<p class="body-l">

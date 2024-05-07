@@ -817,7 +817,6 @@ footer {
       width: 90%;
       float: left;
       padding-bottom: 0;
-      text-align: justify;
     }
     p {
       font-size: 16px;
@@ -829,13 +828,17 @@ footer {
     padding-bottom: 20px;
     @media (min-width: 640px) {
       width: 33.3333%;
-      float: left;
+      display: inline-block;
+      align-content: flex-end;
+      height: 190px;
       padding-top: 20px;
+      text-align: right;
     }
     @media (max-width: 639.9px) {
       width: 90%;
-      float: left;
-      padding-top: 0;
+      display: inline-block;
+      align-content: flex-end;
+      padding-top: 25px;
     }
     img {
       max-width: 290px !important;
