@@ -1019,7 +1019,7 @@ legend:has(+ div div.custom-checkbox) {
 .input-checkbox-wrapper label {
   display: inline-block;
   margin-bottom: 0;
-  padding: 8px 50px 5px;
+  padding: 8px 50px 0 0;
   cursor: pointer;
   touch-action: manipulation;
   letter-spacing: 0.5px;
@@ -1287,7 +1287,7 @@ html:not(#__):not(#___) .cadmin .toggle-switch-check-bar {
 }
 
 html:not(#__):not(#___) .cadmin .toggle-switch-label {
-  margin-left: 45px;
+  margin-left: 50px;
 }
 
 .form-control-select-secondary.show, 
