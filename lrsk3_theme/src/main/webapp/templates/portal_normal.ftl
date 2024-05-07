@@ -127,12 +127,14 @@
                 <div class="lfr-layout-structure-item-container container-fluid container-fluid-max-xl">
                     <div class="idsk-footer-feedback-usefull-question" id="footer-feedback-usefull-question">
                         Boli tieto informácie pre vás užitočné?
-                        <button class="btn btn-primary idsk-footer-feedback-usefull-question__yes" id="footer-feedback-usefull-question__yes">
-                            Áno
-                        </button>
-                        <button class="btn btn-secondary idsk-footer-feedback-usefull-question__no" id="footer-feedback-usefull-question__no">
-                            Nie
-                        </button>
+                        <div class="idsk-footer-feedback-usefull-buttons">
+                            <button class="btn btn-primary idsk-footer-feedback-usefull-question__yes" id="footer-feedback-usefull-question__yes">
+                                Áno
+                            </button>
+                            <button class="btn btn-secondary idsk-footer-feedback-usefull-question__no" id="footer-feedback-usefull-question__no">
+                                Nie
+                            </button>
+                        </div>
                     </div>
                     <div class="idsk-footer-feedback__sent-hidden" id="footer-feedback__sent">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 12px;">
