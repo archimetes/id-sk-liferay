@@ -1241,8 +1241,7 @@ div.ddm-layout-builder.ddm-page-container-layout > div > div > p > span {
   margin-bottom: 30px !important;
 }
 
-.lfr-ddm-form-container .custom-control-label-text,
-.input-checkbox-wrapper label {
+.lfr-ddm-form-container .custom-control-label-text {
   font-size: 19px;
   font-weight: 400; //regular
   line-height: 28px;
@@ -1251,6 +1250,31 @@ div.ddm-layout-builder.ddm-page-container-layout > div > div > p > span {
   &.small {
     margin-left: -15px;
   }
+}
+
+.input-checkbox-wrapper label:not(:has(.toggle-switch-label)) {
+  font-size: 19px !important;
+  font-weight: 400; //regular
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #000000 !important;
+  margin-left: 50px !important;
+  &.small {
+    margin-left: -15px;
+  }
+}
+
+.input-checkbox-wrapper label:has(.toggle-switch-label) {
+  font-size: 19px !important;
+  word-wrap: normal !important;
+}
+
+html:not(#__):not(#___) .cadmin .toggle-switch-check-bar {
+  display: none;
+}
+
+html:not(#__):not(#___) .cadmin .toggle-switch-label {
+  margin-left: 45px;
 }
 
 .form-control-select-secondary.show, 
