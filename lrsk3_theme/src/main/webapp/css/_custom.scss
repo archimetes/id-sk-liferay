@@ -158,6 +158,19 @@ a, button {
   }
 }
 
+.back-link {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  & > svg {
+    height: 24px;
+    width: 24px;
+  }
+  & > a {
+    vertical-align: sub;
+    margin-left: 14.41px;
+  }
+}
+
 @media (max-width: 729.9px) {
   h1 {
     font-size: 36px;
@@ -1498,8 +1511,9 @@ html:not(#__):not(#___) .cadmin .toggle-switch-label {
     padding-left: 30px;
   }
   .idsk-card-img-horizontal {
-    width: 33%;
+    width: 33.3333%;
     float: left;
+    margin-top: 5px;
   }
   .idsk-card-img-vertical {
     width: 100%;
@@ -1556,6 +1570,7 @@ html:not(#__):not(#___) .cadmin .toggle-switch-label {
   font-size: 19px;
   line-height: 28px;
   letter-spacing: 0.5px;
+  margin-bottom: inherit;
 }
 
 .idsk-card-meta-container {
