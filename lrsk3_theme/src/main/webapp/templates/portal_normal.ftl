@@ -152,9 +152,10 @@
                             <a class="link-s" id="footer-feedback-report-form-hidden"><b>Zatvoriť</b></a>
                         </p>
                         <div class="idsk-footer-feedback-report-form-instance">
-                            <#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "formInstanceId": "35534"})/>
-                            <@liferay_portlet["runtime"] defaultPreferences="${preferences}" 
-                                portletName="com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormPortlet_INSTANCE_alh7lSzPZWu0_fm"/>
+                            <@liferay_portlet["runtime"]
+                                portletName="com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormPortlet"
+                                instanceId="site_footer"
+                                settingsScope="group"/>
                         </div>
                     </div>
                 </div>
