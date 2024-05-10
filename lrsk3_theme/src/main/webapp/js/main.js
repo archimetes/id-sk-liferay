@@ -3,6 +3,40 @@
  * loaded.
  */
 AUI().ready(function () {
+    if (document.getElementById("footer-feedback-usefull-question__yes")) {
+        document.getElementById("footer-feedback-usefull-question__yes").onclick = function () {
+            document.getElementById("footer-feedback-usefull-question").className = "idsk-footer-feedback-usefull-question-hidden";
+            document.getElementById("footer-feedback__sent").className = "idsk-footer-feedback__sent";
+        };
+    }
+
+    if (document.getElementById("footer-feedback-usefull-question__no")) {
+        document.getElementById("footer-feedback-usefull-question__no").onclick = function () {
+            document.getElementById("footer-feedback-usefull-question").className = "idsk-footer-feedback-usefull-question-hidden";
+            document.getElementById("footer-feedback__sent").className = "idsk-footer-feedback__sent";
+        };
+    }
+
+    if (document.getElementById("footer-feedback-report-button")) {
+        document.getElementById("footer-feedback-report-button").onclick = function () {
+            var footer_feedback_report_form = document.getElementById("footer-feedback-report-form").className;
+            if (footer_feedback_report_form == 'idsk-footer-feedback-report-form-hidden') {
+                document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form";
+            } else {
+                document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form-hidden";
+            }
+        };
+    }
+
+    if (document.getElementById("footer-feedback-report-form-hidden")) {
+        document.getElementById("footer-feedback-report-form-hidden").onclick = function () {
+            document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form-hidden";
+        };
+    }
+
+    if (window.location.search.indexOf("DDMFormPortlet") > -1) {
+        document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form";
+    }
 });
 
 /*
@@ -39,26 +73,3 @@ Liferay.on('allPortletsReady', function () {
   });
 
 });
-
-document.getElementById("footer-feedback-usefull-question__yes").onclick = function () {
-    document.getElementById("footer-feedback-usefull-question").className = "idsk-footer-feedback-usefull-question-hidden";
-    document.getElementById("footer-feedback__sent").className = "idsk-footer-feedback__sent";
-};
-
-document.getElementById("footer-feedback-usefull-question__no").onclick = function () {
-    document.getElementById("footer-feedback-usefull-question").className = "idsk-footer-feedback-usefull-question-hidden";
-    document.getElementById("footer-feedback__sent").className = "idsk-footer-feedback__sent";
-};
-
-document.getElementById("footer-feedback-report-button").onclick = function () {
-    var footer_feedback_report_form = document.getElementById("footer-feedback-report-form").className;
-    if (footer_feedback_report_form == 'idsk-footer-feedback-report-form-hidden') {    
-        document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form";
-    } else {
-        document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form-hidden";
-    }
-};
-
-document.getElementById("footer-feedback-report-form-hidden").onclick = function () {
-    document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form-hidden";
-};
