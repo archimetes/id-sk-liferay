@@ -36,6 +36,7 @@ AUI().ready(function () {
 
     if (window.location.search.indexOf("DDMFormPortlet") > -1) {
         document.getElementById("footer-feedback-report-form").className = "idsk-footer-feedback-report-form";
+        document.getElementById("footer-feedback-report-form").scrollIntoView();
     }
 });
 
