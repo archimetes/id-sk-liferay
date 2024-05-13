@@ -44,7 +44,24 @@
         </div>
     </div>
     <div id="idsk-header-web__brand_detail" class="lrsk-expandable">
-        <div class="lfr-layout-structure-item-container  container-fluid container-fluid-max-xl" >Tu pride extra text</div>
+        <div class="lfr-layout-structure-item-container container-fluid container-fluid-max-xl">
+            <div class="idsk-header-web__brand_detail-one-half">
+                <h3 class="body">
+                    Doména gov.sk je oficiálna
+                </h3>
+                <p class="body">
+                    Toto je oficiálna webová stránka orgánu verejnej moci Slovenskej republiky. Oficiálne stránky využívajú najmä doménu gov.sk. <a class="link" href="https://www.slovensko.sk/sk/agendy/agenda/_organy-verejnej-moci" target="_blank" title="odkazy na webové sídla orgánov verejnej moci">Odkazy na jednotlivé webové sídla orgánov verejnej moci nájdete na tomto odkaze</a>.
+                </p>
+            </div>
+            <div class="idsk-header-web__brand_detail-one-half">
+                <h3 class="body">
+                    Táto stránka je zabezpečená
+                </h3>
+                <p class="body">
+                    Buďte pozorní a vždy sa uistite, že zdieľate informácie iba cez zabezpečenú webovú stránku verejnej správy SR. Zabezpečená stránka vždy začína https:// pred názvom domény webového sídla.
+                </p>
+            </div>
+        </div>
     </div>
   </div>
     <div class="d-flex flex-column flex-fill position-relative" id="wrapper">

@@ -443,6 +443,17 @@ header#banner {
 .container-fluid-max-xl {
   max-width: var(--container-max-xl, 960px);
   padding: 0;
+
+  @media (min-width: 1020px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (max-width: 1020px) {
+    margin-right: max(15px, calc(15px + env(safe-area-inset-right)));
+    margin-left: max(15px, calc(15px + env(safe-area-inset-right)));
+  }
+}
 }
 
 .idsk-header-web__brand {
@@ -450,6 +461,38 @@ header#banner {
   color: $white;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0.5px;
+
+  &_detail {
+    &-one-half {
+      width: 100%;
+      padding-right: 40px;
+
+      @media (min-width: 40.0625em) {
+        width: 50%;
+        float: left;
+      }
+
+      .body:first-child {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        margin: 30px 0 0;
+      }
+
+      p.body {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      
+      a.link {
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
 
   &-button {
     font-weight: 400;
@@ -458,6 +501,10 @@ header#banner {
     background: none;
     color: white;
     border: none;
+
+    @media (max-width: 960px) {
+      margin-right: 30px;
+    }
   }
 
   &-text {
