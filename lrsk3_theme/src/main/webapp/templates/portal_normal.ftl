@@ -20,6 +20,11 @@
 
 <div class="d-flex flex-column min-vh-100">
     <@liferay.control_menu />
+    <div class="lfr-layout-structure-item-container container-fluid container-fluid-max-xl">
+        <#if cookie_banner >
+            <#include "${full_templates_path}/cookie_banner.ftl"/>
+        </#if>
+    </div>
   <div class="idsk-header-web__brand">
     <div class="lfr-layout-structure-item-container  container-fluid container-fluid-max-xl" >
         <div class="idsk-header-web__brand-text">

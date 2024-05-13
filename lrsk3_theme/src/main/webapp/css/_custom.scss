@@ -437,7 +437,14 @@ a {
 }
 
 header#banner {
-  box-shadow: 0px 5px 5px lightgrey
+  box-shadow: 0px 5px 5px lightgrey;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  @media (min-width: 40.0625em) {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .container-fluid-max-xl {
@@ -454,6 +461,46 @@ header#banner {
     margin-left: max(15px, calc(15px + env(safe-area-inset-right)));
   }
 }
+
+.idsk-cookie-banner {
+  &__message-two-thirds {
+    width: 100%;
+    margin-left: -15px;
+
+    @media (min-width: 960px) {
+      width: 66.6666%;
+      float: left;
+      margin-left: 0;
+    }
+  }
+
+  .idsk-button-group {
+    margin-bottom: 15px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  @media (max-width: 40.0625em) {
+    .link, .btn {
+      width: 95%;
+    }
+
+    .js-cookies-button-accept {
+      margin-top: 17px;
+    }
+  }
+
+  .link, .btn {
+    margin-right: 15px;
+    margin-bottom: 17px;
+  }
+
+  .idsk-cookie-banner__heading {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-size: 24px;
+  }
 }
 
 .idsk-header-web__brand {
@@ -542,7 +589,6 @@ header#banner {
       line-height: 1.31579;
     }
 
-
     @media (max-width: 729.9px) {
       right: 0;
       width: 130px;
@@ -589,7 +635,7 @@ header#banner {
   :focus .idsk-header-web__link-arrow {
     background-color: $black;
   }
-  }
+}
 
 .lrsk-expandable {
   display: none;

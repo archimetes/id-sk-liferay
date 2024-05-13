@@ -7,6 +7,7 @@
     inline_navigation = getterUtil.getBoolean(themeDisplay.getThemeSetting("inline-navigation"))
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
     show_feedback = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-feedback"))
+	cookie_banner = getterUtil.getBoolean(themeDisplay.getThemeSetting("cookie_banner"))
 />
 
 <#if wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))>
