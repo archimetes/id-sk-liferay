@@ -445,6 +445,103 @@ header#banner {
     margin-right: 0;
     margin-left: 0;
   }
+  
+  .navbar:first-child {
+    padding-top: 11px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .navbar:last-child {
+    border-top: 1px solid #E0E0E0;
+    height: 40px;
+    padding: 0;
+
+    li {
+      margin-right: 15px;
+      height: 40px;
+    }
+
+    li > a {
+      text-decoration: none;
+      font-size: 19px;
+      line-height: 15px;
+      letter-spacing: 0.5px;
+      color: $black;
+    }
+
+    li:hover > a:hover, li.selected > a {
+      color: #0B4199;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 15px;
+      letter-spacing: 0.5px;
+      border-bottom: 4px solid #0B4199;
+    }
+  }
+
+  button.sign-in {
+    width: 103px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #126DFF !important;
+    border: 3px solid #126DFF !important;
+    color: $white;
+    font-weight: bold;
+    text-align: center;
+
+    .inline-item {
+      display: none;
+    }
+  }
+
+  button.sign-in:hover {
+    border: 3px solid #072C66 !important;
+  }
+
+  .user-personal-bar {
+    div.autofit-col:has(div.search-bar-suggestions) {
+      padding-top: 9px;
+    }
+  }
+
+  .search-bar-suggestions {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid $black;
+    color: $white; 
+
+    .form-control::placeholder {
+      color: $white;
+    }
+
+    .search-bar-keywords-input {
+      height: 36px;
+      background-color: $white;
+      border: none;
+    }
+
+    .input-group-inset-item {
+      background-color: #126DFF;
+      color: $white;
+      height: 36px;
+      width: 46px;
+      border-bottom-width: 0;
+      border-top-width: 0;
+      border-right-width: 0;
+      border-radius: 0 3px 3px 0;
+
+      button {
+        margin-left: 0;
+      }
+
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
 }
 
 .container-fluid-max-xl {
@@ -469,7 +566,6 @@ header#banner {
 
     @media (min-width: 960px) {
       width: 66.6666%;
-      float: left;
       margin-left: 0;
     }
   }
@@ -478,6 +574,11 @@ header#banner {
     margin-bottom: 15px;
     display: inline-block;
     text-align: center;
+
+    .link {
+      margin-right: 15px;
+      margin-bottom: 17px;
+    }
   }
 
   @media (max-width: 40.0625em) {
@@ -490,7 +591,7 @@ header#banner {
     }
   }
 
-  .link, .btn {
+  .btn {
     margin-right: 15px;
     margin-bottom: 17px;
   }
