@@ -11,7 +11,7 @@
 />
 
 <#if wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))>
-	<#assign portal_content_css_class = "container" />
+	<#assign portal_content_css_class = "container-fluid container-fluid-max-xl" />
 <#else>
 	<#assign portal_content_css_class = "" />
 </#if>

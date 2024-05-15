@@ -453,7 +453,6 @@ header#banner {
 
   .navbar:last-child {
     border-top: 1px solid #E0E0E0;
-    height: 40px;
     padding: 0;
 
     li {
@@ -604,6 +603,26 @@ header#banner {
   }
 }
 
+@media (max-width: 48.0525em) {
+  .idsk-header-web__brand-text-gestor {
+    display: none;
+  }
+
+  header#banner .navbar:last-child {
+    height: auto;
+  }
+}
+
+@media (min-width: 48.0625em) {
+  .idsk-header-web__brand-text-gestor--mobile {
+    display: none;
+  }
+
+  header#banner .navbar:last-child {
+    height: 40px;
+  }
+}
+
 .idsk-header-web__brand {
   background-color: #072C66;
   color: $white;
@@ -649,6 +668,7 @@ header#banner {
     background: none;
     color: white;
     border: none;
+    padding-left: 0;
 
     @media (max-width: 960px) {
       margin-right: 30px;

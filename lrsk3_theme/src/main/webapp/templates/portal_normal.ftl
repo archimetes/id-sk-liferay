@@ -25,16 +25,23 @@
             <#include "${full_templates_path}/cookie_banner.ftl"/>
         </#if>
     </div>
-  <div class="idsk-header-web__brand">
+  <div class="idsk-header-web__brand" id="wrapper">
     <div class="lfr-layout-structure-item-container  container-fluid container-fluid-max-xl" >
         <div class="idsk-header-web__brand-text">
-            <div style="float: left">
+            <div class="idsk-header-web__brand-text-gestor" style="float: left">
                 Oficiálna stránka <button class="idsk-header-web__brand-button lrsk-expanding "
                                           data-text-for-hide="Skryť panel"
                                           data-text-for-show="Rozbaliť panel"
                                           data-expand-target="idsk-header-web__brand_detail"><b>verejnej správy SR</b>
                     <span class="idsk-header-web__link-arrow"></span>
                 </button>
+            </div>
+            <div class="idsk-header-web__brand-text-gestor--mobile" style="float: left">
+                  SK <button class="idsk-header-web__brand-button lrsk-expanding "
+                              data-text-for-hide="Skryť panel"
+                              data-text-for-show="Rozbaliť panel"
+                              data-expand-target="idsk-header-web__brand_detail"><b>e-Gov</b>
+                    <span class="idsk-header-web__link-arrow"></span>
             </div>
             <div style="display: inline-block;"> </div>
             <div style="float: right">
