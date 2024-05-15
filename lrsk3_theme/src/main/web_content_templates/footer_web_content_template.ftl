@@ -1,8 +1,8 @@
 <div class="container-fluid container-fluid-max-xl">
-	<#if extendedList.getSiblings()?has_content>
-		<#assign extendedList_item = extendedList.getSiblings()>
-		<#list 0..extendedList_item?size-1 as i>
-			<#if extendedList_item?size = 1>
+	<#if link.getSiblings()?has_content>
+		<#assign cur_link_item = link.getSiblings()>
+		<#list 0..cur_link_item?size-1 as i>
+			<#if cur_link_item?size = 1>
 			  <div class="footer-extended-list-one-full">
 			<#else>
 				<#if i == 0>
@@ -11,10 +11,10 @@
 					<div class="footer-extended-list-two">
 				</#if>
 			</#if>
-			<#if extendedList_item[i].extendedListTitle?has_content>
-				<span class="footer-extended-list-title">${extendedList_item[i].extendedListTitle.data}</span>
-				<#if extendedList_item[i].extendedListTitle.data?? && extendedList_item[i].extendedListTitle.data == "">
-					<#if extendedList_item[0].extendedListLink.getSiblings()[0].extendedListText.data != "">
+			<#if cur_link_item[i].listLinkTitle?has_content>
+				<span class="footer-extended-list-title">${cur_link_item[i].listLinkTitle.data}</span>
+				<#if cur_link_item[i].listLinkTitle.data?? && cur_link_item[i].listLinkTitle.data == "">
+					<#if cur_link_item[0].listLink.getSiblings()[0].linkTitle.data != "">
 						<#if i == 0>
 								<hr class="footer-selector-list-one"/>
 							<#else>
@@ -23,7 +23,7 @@
 					<#else>
 					</#if>
 				<#else>
-					<#if extendedList_item?size = 1>
+					<#if cur_link_item?size = 1>
 						<hr class="footer-selector-list-one-full"/>
 					<#else>
 						<#if i == 0>
@@ -36,35 +36,41 @@
 			</#if>
 			<div class="footer-extended-list-col">
 				<ul class="footer-extended-list">
-					<#list extendedList_item[i].extendedListLink.getSiblings() as cur_item>
-						<#if cur_item.extendedListText.data?? && cur_item.extendedListText.data == "">
-						<#else>
-							<li class="footer-extended-list-item">
-								<a class="footer-extended-list-item-link link-s" data-senna-off="true" href="${cur_item.extendedListUrl.data}" title="${cur_item.extendedListText.data}">
-									${cur_item.extendedListText.data}
+					<#list cur_link_item[i].listLink.getSiblings() as cur_item>
+          	<li class="footer-extended-list-item">
+							<#if cur_item.linkToPage.getData()?has_content>
+								<a class="footer-extended-list-item-link link-s" data-senna-off="true" href="${cur_item.linkToPage.getFriendlyUrl()}" title="${cur_item.linkTitle.data}">
+									${cur_item.linkTitle.data}
 								</a>
-							</li>
-						</#if>
+							<#else>
+								<a class="footer-extended-list-item-link link-s" data-senna-off="true" href="${cur_item.linkToUrl.data}" title="${cur_item.linkTitle.data}">
+									${cur_item.linkTitle.data}
+								</a>
+							</#if>
+						</li>
 					</#list>
 				</ul>
 			</div>
 			</div>
 		</#list>
-		<#if extendedList_item?size gt 1 || extendedList_item[0].extendedListLink.getSiblings()[0].extendedListText.data != "">
+		<#if cur_link_item?size gt 1 || cur_link_item[0].listLink.getSiblings()[0].listTitle.data != "">
 			<hr class="footer-selector-full"/>
 		</#if>
 	</#if>
-	<#if extendedInlineListLink.getSiblings()?has_content>
+	<#if inlineLink.getSiblings()?has_content>
 		<ul class="footer-extended-inline-list">
-			<#list extendedInlineListLink.getSiblings() as cur_item>
-				<#if cur_item.extendedInlineListText.data?? && cur_item.extendedInlineListText.data == "">
-				<#else>
-					<li class="footer-extended-inline-list-item">
-						<a class="footer-extended-inline-list-item-link link-s" data-senna-off="true" href="${cur_item.extendedInlineListUrl.data}" title="${cur_item.extendedInlineListText.data}">
-							${cur_item.extendedInlineListText.data}
+			<#list inlineLink.getSiblings() as cur_item>
+				<li class="footer-extended-inline-list-item">
+					<#if cur_item.inlineLinkToPage.getData()?has_content>
+						<a class="footer-extended-inline-list-item-link link-s" data-senna-off="true" href="${cur_item.inlineLinkToPage.getFriendlyUrl()}" title="${cur_item.inlineLinkTitle.data}">
+							${cur_item.inlineLinkTitle.data}
 						</a>
-					</li>
-				</#if>
+					<#else>
+						<a class="footer-extended-inline-list-item-link link-s" data-senna-off="true" href="${cur_item.inlineLinkToUrl.data}" title="${cur_item.inlineLinkTitle.data}">
+							${cur_item.inlineLinkTitle.data}
+						</a>
+					</#if>
+				</li>
 			</#list>
 		</ul>
 	</#if>
