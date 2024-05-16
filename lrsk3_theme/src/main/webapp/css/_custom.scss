@@ -505,7 +505,6 @@ header#banner {
   }
 
   .search-bar-suggestions {
-    width: 300px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid $black;
@@ -611,6 +610,10 @@ header#banner {
   header#banner .navbar:last-child {
     height: auto;
   }
+
+  .search-bar-suggestions {
+    width: auto;
+  }
 }
 
 @media (min-width: 48.0625em) {
@@ -620,6 +623,10 @@ header#banner {
 
   header#banner .navbar:last-child {
     height: 40px;
+  }
+
+  .search-bar-suggestions {
+    width: 300px;
   }
 }
 
