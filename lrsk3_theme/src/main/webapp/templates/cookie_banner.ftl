@@ -1,6 +1,6 @@
 <div class="idsk-cookie-banner pdt-20" data-nosnippet="" role="region" aria-label="Cookies na stránke verejnej správy SR">
     <!-- COOKIES MESSAGE -->
-    <div class="idsk-cookie-banner__message">
+    <div class="idsk-cookie-banner__message idsk-container">
         <div class="lfr-layout-structure-item-container container-fluid container-fluid-max-xl">
             <div class="idsk-cookie-banner__message-two-thirds">
                 <h2 class="idsk-cookie-banner__heading">

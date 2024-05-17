@@ -73,4 +73,36 @@ Liferay.on('allPortletsReady', function () {
         },false);
   });
 
+  document.querySelectorAll(".idsk-header-web__main-headline-menu-button").forEach(function(element) {
+        element.addEventListener("click", function() {
+            if (element.innerHTML.indexOf("Menu") > -1) {
+                element.innerHTML = element.innerHTML.replace("Menu", "Zavrieť");
+            } else {
+                element.innerHTML = element.innerHTML.replace("Zavrieť", "Menu");
+            }
+
+            var searchElement = document.querySelector(".idsk-header-web__main-headline-search-button");
+            searchElement.classList.toggle("idsk-header-web__main-headline-search-button--active");
+
+            var logoElement = document.querySelector(".idsk-header-web__main-logo--mobile");
+            logoElement.classList.toggle("idsk-header-web__main-logo--mobile-hidden");
+
+            var actionElement = document.querySelector(".idsk-header-web__main-action");
+            actionElement.classList.toggle("idsk-header-web__main-action--mobile");
+
+            var navElement = document.querySelector(".idsk-header-web__nav");
+            navElement.classList.toggle("idsk-header-web__nav--mobile");
+
+            var menuOpenElement = document.querySelector(".idsk-header-web__menu-open");
+            menuOpenElement.classList.toggle("idsk-header-web__menu-open--hidden");
+
+            var menuCloseElement = document.querySelector(".idsk-header-web__menu-close");
+            menuCloseElement.classList.toggle("idsk-header-web__menu-close--active");
+        });
+    });
+
+    document.querySelector(".idsk-header-web__main-headline-search-button").addEventListener("click", function() {
+        var searchElement = document.querySelector(".idsk-header-web__main-action .navbar-form");
+        searchElement.classList.toggle("idsk-header-web__main-action-search-button--active");
+    });
 });
