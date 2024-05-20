@@ -105,4 +105,10 @@ Liferay.on('allPortletsReady', function () {
         var searchElement = document.querySelector(".idsk-header-web__main-action .navbar-form");
         searchElement.classList.toggle("idsk-header-web__main-action-search-button--active");
     });
+
+    document.querySelectorAll(".idsk-header-web__nav-list-item").forEach(function(element) {
+        element.addEventListener("click", function() {
+            element.classList.toggle("idsk-header-web__nav-list-item--active");
+        });
+    });
 });
