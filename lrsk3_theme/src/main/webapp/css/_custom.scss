@@ -354,6 +354,17 @@ a {
   border-radius: 5px;
   background-color: #126DFF !important;
   border: 3px solid #126DFF !important;
+  text-decoration: none;
+
+  &:visited {
+    color: $white;
+  }
+}
+
+.component-button {
+  .btn-primary {
+    padding-top: 0.4375rem;
+  }
 }
 
 .btn-medium {

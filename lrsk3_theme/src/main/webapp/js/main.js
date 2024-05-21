@@ -111,4 +111,12 @@ Liferay.on('allPortletsReady', function () {
             element.classList.toggle("idsk-header-web__nav-list-item--active");
         });
     });
+
+    window.addEventListener("mouseup", function(event) {
+        if (!(event.target.closest(".idsk-header-web__nav-list-item"))) {
+            if (document.querySelector(".idsk-header-web__nav-list-item--active")) {
+                document.querySelector(".idsk-header-web__nav-list-item--active").classList.remove("idsk-header-web__nav-list-item--active");
+            };
+        }
+    });  
 });

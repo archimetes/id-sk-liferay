@@ -9,9 +9,4 @@
     show_feedback = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-feedback"))
 	cookie_banner = getterUtil.getBoolean(themeDisplay.getThemeSetting("cookie_banner"))
 />
-
-<#if wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))>
-	<#assign portal_content_css_class = "container-fluid container-fluid-max-xl" />
-<#else>
-	<#assign portal_content_css_class = "" />
-</#if>
+<#assign portal_content_css_class = "container-fluid container-fluid-max-xl" />
