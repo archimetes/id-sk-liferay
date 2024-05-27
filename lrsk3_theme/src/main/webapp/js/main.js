@@ -101,10 +101,12 @@ Liferay.on('allPortletsReady', function () {
         });
     });
 
-    document.querySelector(".idsk-header-web__main-headline-search-button").addEventListener("click", function() {
-        var searchElement = document.querySelector(".idsk-header-web__main-action .navbar-form");
-        searchElement.classList.toggle("idsk-header-web__main-action-search-button--active");
-    });
+    if (document.querySelector(".idsk-header-web__main-headline-search-button")) {
+        document.querySelector(".idsk-header-web__main-headline-search-button").addEventListener("click", function() {
+            var searchElement = document.querySelector(".idsk-header-web__main-action .navbar-form");
+            searchElement.classList.toggle("idsk-header-web__main-action-search-button--active");
+        });
+    }
 
     document.querySelectorAll(".idsk-header-web__nav-list-item").forEach(function(element) {
         element.addEventListener("click", function() {
